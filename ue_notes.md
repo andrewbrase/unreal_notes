@@ -96,3 +96,31 @@ The associated C++ class is `GameMode`
     - Information about the game score.
     - Whether a match has started or not.
     - How many AI characters to spawn based on the number of players in the world.
+
+- For multiplayer games, there is one local instance of the Game State on each player's machine. Local Game State instances get their updated information from the server's instance of the Game State.
+ 
+The associated C++ class is `GameState`
+
+---
+### Brush
+- A Brush is an Actor that describes a 3D shape, such as a cube or a sphere. You can place brushes in a level to define level geometry (these are known as Binary Space Partition or BSP brushes). This is useful if you want to quickly block out a level, for example.
+
+---
+### Volume
+- Volumes are bounded 3D spaces that have different uses based on the effects attached to them. For example:
+
+    - Blocking Volumes are invisible and used to prevent Actors from passing through them.
+    - Pain Causing Volumes cause damage over time to any Actor that overlaps them.
+    - Trigger Volumes are programmed to cause events when an Actor enters or exits them.
+
+*self* Fire area
+
+---
+### Level
+- A Level is a gameplay area that you define. Levels contain everything a player can see and interact with, such as geometry, Pawns, and Actors.
+
+- Unreal Engine saves each level as a separate `.umap` file, which is why you will sometimes see them referred to as Maps.
+
+---
+### World
+- A World is a container for all the Levels that make up your game. It handles the streaming of Levels and the spawning (creation) of dynamic Actors.
