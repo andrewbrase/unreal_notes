@@ -1,4 +1,4 @@
-### Foundational Knowledge
+**Foundational Knowledge**
 ---
 ### Class
 - *A Class defines the behaviors and properties of a particular Actor or Object in Unreal Engine*. Classes are hierarchical, meaning a Class inherits information from its parent Class (that is, the Class it was derived or "sub-classed" from) and passes that information to its children. Classes can be created in C++ code or in Blueprints.
