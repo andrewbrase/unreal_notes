@@ -126,3 +126,13 @@ The associated C++ class is `GameState`
 ---
 ### World
 - A World is a container for all the Levels that make up your game. It handles the streaming of Levels and the spawning (creation) of dynamic Actors.
+
+**Tools and Editors**
+---
+- A **tool** is something you use to *perform a specific task, like placing Actors inside a level, or painting terrain.*
+
+- An **editor** is *a collection of tools you use to achieve something more complex*. For example, the Level Editor enables you to build your game's levels, or you can change the look and feel of Materials inside the Materials Editor.
+
+- A **system** is a *large collection of features that work together to produce some aspect of the game or application*. For example, Blueprint is a system used to visually script gameplay elements.
+
+`Sometimes, systems and editors can have similar names. For example, the Material Editor is used to edit Material assets, while the Material system provides the underlying support for using Materials in Unreal Engine.`
