@@ -23,3 +23,23 @@
 - Casting is different from simply checking whether an Actor is of a given class, which would return a binary (yes or no) answer, but wouldn't allow you to interact with any specific functionality of that class.
 ---
 ### Component
+- *A component is a piece of functionality that can be added to an actor*
+    - When you add a component to an actor, the actor can use the functionality that the component provides. For example...
+        - A Spot Light Component will *make your Actor emit light like a spot light.*
+        - A Rotating Movement Component will *make your Actor spin around.*
+        - An Audio Component will *give your Actor the ability to play sounds.*
+    - **Components must be attached to an Actor and can't exist by themselves.**
+---
+### Pawn
+- Pawns are a subclass actor and server as an in-game avatar or persona (for example, the characters in a game) *Pawns can be controlled by a player* or *by the games AI, as a non-playable character (NPC)*
+    - When a pawn is controlled by a human or AI player, it is considered *Possessed*
+    - When a pawn is NOT controlled it is considered *Unpossessed*
+---
+### Character
+- A character is a subclass of a Pawn Actor that is intended to be used as a player character.
+- The Character subclass includes a collision setup, input bindings for bipedal movement, and additional code for player-controlled movement.
+---
+### Player Controller
+- A *player controller* takes **player input** and *translates it into interactions in the game*.
+- Every game has at least one player controller in it.
+    - A Player Controller often possesses a Pawn or Character as a representation of the player in game. 
