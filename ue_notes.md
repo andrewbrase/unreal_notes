@@ -135,4 +135,4 @@ The associated C++ class is `GameState`
 
 - A **system** is a *large collection of features that work together to produce some aspect of the game or application*. For example, Blueprint is a system used to visually script gameplay elements.
 
-`Sometimes, systems and editors can have similar names. For example, the Material Editor is used to edit Material assets, while the Material system provides the underlying support for using Materials in Unreal Engine.`
+*Sometimes, systems and editors can have similar names. For example, the Material Editor is used to edit Material assets, while the Material system provides the underlying support for using Materials in Unreal Engine.*
