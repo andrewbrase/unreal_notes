@@ -4,7 +4,7 @@
 ### Objects
 - Objects are the most basic class in Unreal Engine - in other words, *they act like building blocks and contain a lot of the essential functionality for your Assets*. Almost everything in Unreal Engine inherits (or gets some functionality) from an Object.
 
-- Uobject - the base class of all objects in Unreal Engine
+- `Uobject` - the base class of all objects in Unreal Engine
     - it implements features such as 
         - garbage collections
         - metadata (UProperty) support for exposing variables to Unreal Editor
@@ -13,7 +13,7 @@
 ### Actors
 - *An Actor is any object that can be placed into a level*, such as a Camera, static mesh, or player start location. Actors support 3D transformations such as translation, rotation, and scaling. They can be created (spawned) and destroyed through gameplay code (C++ or Blueprints).
 
-- AActor - the base class of all Actors in Unreal Engine
+- `AActor` - the base class of all Actors in Unreal Engine
 ---
 ### Casting
 - Casting is an action that *takes an Actor of a specific class and tries to treat it as if it were of a different class*. Casting can succeed or fail. If casting succeeds, you can then access class-specific functionality on the Actor you cast to.
@@ -43,3 +43,6 @@
 - A *player controller* takes **player input** and *translates it into interactions in the game*.
 - Every game has at least one player controller in it.
     - A Player Controller often possesses a Pawn or Character as a representation of the player in game. 
+    - The Player Controller is also the primary network interaction point for multiplayer games. During multiplayer play, the server has one instance of a Player Controller for every player in the game since it must be able to make network function calls to each player. Each client only has the Player Controller that corresponds to their player and can only use their Player Controller to communicate with the server.
+
+The associated C++ class is `PlayerController`
