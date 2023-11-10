@@ -13,7 +13,7 @@
 ### Actors
 - *An Actor is any object that can be placed into a level*, such as a Camera, static mesh, or player start location. Actors support 3D transformations such as translation, rotation, and scaling. They can be created (spawned) and destroyed through gameplay code (C++ or Blueprints).
 
-- `AActor` - the base class of all Actors in Unreal Engine
+`AActor` - the base class of all Actors in Unreal Engine
 ---
 ### Casting
 - Casting is an action that *takes an Actor of a specific class and tries to treat it as if it were of a different class*. Casting can succeed or fail. If casting succeeds, you can then access class-specific functionality on the Actor you cast to.
@@ -46,3 +46,46 @@
     - The Player Controller is also the primary network interaction point for multiplayer games. During multiplayer play, the server has one instance of a Player Controller for every player in the game since it must be able to make network function calls to each player. Each client only has the Player Controller that corresponds to their player and can only use their Player Controller to communicate with the server.
 
 The associated C++ class is `PlayerController`
+---
+### AI Controller
+- Just as the Player Controller possesses a Pawn as a representation of the player in a game, an AI Controller possesses a Pawn to represent a non-player character (NPC) in a game. By default, Pawns and Characters will end up with a base AI Controller unless they are specifically possessed by a Player Controller or told not to create an AI Controller for themselves.
+
+The associated C++ class is `AIController`
+---
+### Player State
+- A Player State is the state of a participant in the game, such as a human player or a bot that is simulating a player. Non-player AI that exists as part of the game world doesn't have a Player State.
+
+- Some examples of player information that the Player State can contain include:
+    - Name
+    - Current level
+    - Health
+    - Score
+    - Whether they are currently carrying the flag in a Capture the Flag game.
+
+- For multiplayer games, Player States for all players exist on all machines and can replicate data from the server to the client to keep things in sync. This is different from a Player Controller, which will only exist on the machine of the player it represents.
+
+The associated C++ class is `PlayerState`
+---
+### Game Mode
+- The *Game mode* sets the rules of the game that is being played. These can include...
+    - How players join the game
+    - Whether or not the game can be paused
+    - Any game-specific behavior such as win conditions
+
+*self* Like Fall Guys Game Modes
+
+- *You can set the default Game Mode in the Project Settings and override it for different Levels.* Regardless of how you choose to implement it, you can only have one Game Mode for each Level.
+
+- In a multiplayer game, the Game Mode only exists on the server and the rules are replicated (sent) to each of the connected clients.
+
+The associated C++ class is `GameMode`
+---
+### Game State
+- A Game State is a container that holds information you want replicated to every client in a game. In simpler terms, it is 'The State of the Game' for everyone connected.
+
+*self* Like Score boards
+
+- Some examples of what the Game State can contain include:
+    - Information about the game score.
+    - Whether a match has started or not.
+    - How many AI characters to spawn based on the number of players in the world.
