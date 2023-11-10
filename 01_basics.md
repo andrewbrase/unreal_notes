@@ -126,11 +126,11 @@ The associated C++ class is `GameState`
 ---
 ### World
 - A World is a container for all the Levels that make up your game. It handles the streaming of Levels and the spawning (creation) of dynamic Actors.
- 
-
-
-
-
+.
+.
+.
+.
+.
 **Tools and Editors**
 ---
 - A **tool** is something you use to *perform a specific task, like placing Actors inside a level, or painting terrain.*
