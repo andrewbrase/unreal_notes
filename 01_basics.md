@@ -126,7 +126,7 @@ The associated C++ class is `GameState`
 ---
 ### World
 - A World is a container for all the Levels that make up your game. It handles the streaming of Levels and the spawning (creation) of dynamic Actors.
-
+ 
 
 
 
@@ -144,6 +144,7 @@ The associated C++ class is `GameState`
 Some of these tools and editors in Unreal Engine are built-in, while *others come in the form of optional* **plugins** that you can *enable* or *disable* depending on your project needs.
 
 Whether you use the **Blueprint Editor** to script behaviors for the Actors in your level, or create particle effects with the **Niagara Editor**, a good understanding of what each editor can do and how to navigate each one can improve your workflow and help prevent stumbling blocks during development.
+
 ---
 ### Level Editor
 - Gameplay Levels
