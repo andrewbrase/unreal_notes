@@ -1,5 +1,5 @@
 ### Class
-*A Class defines the behaviors and properties of a particular Actor or Object in Unreal Engine*. Classes are hierarchical, meaning a Class inherits information from its parent Class (that is, the Class it was derived or "sub-classed" from) and passes that information to its children. Classes can be created in C++ code or in Blueprints.
+- *A Class defines the behaviors and properties of a particular Actor or Object in Unreal Engine*. Classes are hierarchical, meaning a Class inherits information from its parent Class (that is, the Class it was derived or "sub-classed" from) and passes that information to its children. Classes can be created in C++ code or in Blueprints.
 ---
 ### Objects
 - Objects are the most basic class in Unreal Engine - in other words, *they act like building blocks and contain a lot of the essential functionality for your Assets*. Almost everything in Unreal Engine inherits (or gets some functionality) from an Object.
