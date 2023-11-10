@@ -4,11 +4,11 @@
 ### Objects
 - Objects are the most basic class in Unreal Engine - in other words, *they act like building blocks and contain a lot of the essential functionality for your Assets*. Almost everything in Unreal Engine inherits (or gets some functionality) from an Object.
 
-- `Uobject` - the base class of all objects in Unreal Engine
-    - it implements features such as 
-        - garbage collections
-        - metadata (UProperty) support for exposing variables to Unreal Editor
-        - serialization for loading and saving
+`Uobject` - the base class of all objects in Unreal Engine
+- it implements features such as 
+    - garbage collections
+    - metadata (UProperty) support for exposing variables to Unreal Editor
+    - serialization for loading and saving
 ---
 ### Actors
 - *An Actor is any object that can be placed into a level*, such as a Camera, static mesh, or player start location. Actors support 3D transformations such as translation, rotation, and scaling. They can be created (spawned) and destroyed through gameplay code (C++ or Blueprints).
